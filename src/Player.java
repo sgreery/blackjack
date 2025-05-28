@@ -1,17 +1,21 @@
 public class Player {
     public int cardTotal;
     public boolean isHit;
+    public Card[] cards;
     public int Cards;
     Player [] cardsArray = new Player[cardTotal];
     public Player(){
         cardTotal = 3;
         isHit = true;
-        Cards = 10;
+        cards = new Card[2];
+
     }
-    public void printInfo(){
-        System.out.println(cardTotal);
-        System.out.println(isHit);
-        System.out.println(Cards);
+    public void print(){
+        System.out.println("card total: " + cardTotal);
+        for(int x = 0; x<cards.length; x++){
+            cards[x].print();
+
+        }
     }
 
 }

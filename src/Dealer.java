@@ -1,17 +1,18 @@
 public class Dealer {
-    public int Cardtotal;
-    Dealer [] Cards = new Dealer[Cardtotal];
+    public int cardtotal;
+    Dealer [] Cards = new Dealer[cardtotal];
     public Card[] cards;
-    public int Cardss;
     public boolean isOver17;
     public Dealer(){
-        Cardtotal = 2;
+        cards = new Card[2];
+        cardtotal = 2;
         isOver17 = false;
-        Cardss = 1;
     }
-    public void printInfo(){
-        System.out.println(Cardtotal);
-        System.out.println(isOver17);
-        System.out.println(Cardss);
+    public void print(){
+        System.out.println("card total: " + cardtotal);
+        for(int x = 0; x<cards.length; x++){
+            cards[x].print();
+
+        }
     }
 }
