@@ -28,6 +28,10 @@ public class BASICGAMEAPP {
 
     }
     public void printDeck(){
+        for(int x=0; x<deck.length; x++){
+            System.out.println(x);
+            deck[x].print();
+        }
 
     }
 }
