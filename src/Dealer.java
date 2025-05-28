@@ -12,7 +12,6 @@ public class Dealer {
         System.out.println("card total: " + cardtotal);
         for(int x = 0; x<cards.length; x++){
             cards[x].print();
-
         }
     }
 }

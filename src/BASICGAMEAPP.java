@@ -28,15 +28,15 @@ public class BASICGAMEAPP {
         System.out.println("players info");
         p = new Player();
         //todo: add the card at index 0 of deck to the player cards at index 0
-       p.cards[0] = deck[0];
-       p.cards[1] = deck[1];
+       p.cards[0] = deck[(int)(Math.random()*52)-1];
+       p.cards[1] = deck[(int)(Math.random()*52)-1];
         p.print();
 
 
         System.out.println("dealers info");
         d = new Dealer();
-        d.cards[0] = deck[2];
-        d.cards[1] = deck[3];
+        d.cards[0] = deck[(int)(Math.random()*52)-1];
+        d.cards[1] = deck[(int)(Math.random()*52)-1];
         d.print();
 
 
