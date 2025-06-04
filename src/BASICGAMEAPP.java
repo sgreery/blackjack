@@ -18,12 +18,12 @@ public class BASICGAMEAPP {
                 deck[counter] = c;
 //                c.print();
 
-                deck[counter].print();
+              //  deck[counter].print();
                 counter++;
             }
         }
         System.out.println("*");
-        printDeck();
+       // printDeck();
         shuffle();
         printDeck();
 
@@ -60,8 +60,9 @@ public class BASICGAMEAPP {
         System.out.println("shuffling");
         for(int s = 0; s<deck.length; s++){
             int random = (int)(Math.random()*52);
-
+            Card mrcombs = deck[s];
             deck[s] = deck[random];
+            deck[random] = mrcombs;
         }
     }
 }
