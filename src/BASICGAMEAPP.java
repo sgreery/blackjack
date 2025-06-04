@@ -24,23 +24,21 @@ public class BASICGAMEAPP {
         }
         System.out.println("*");
         printDeck();
+        shuffle();
+        printDeck();
 
         System.out.println("players info");
         p = new Player();
         //todo: add the card at index 0 of deck to the player cards at index 0
-       p.cards[0] = deck[(int)(Math.random()*52)-1];
-       p.cards[1] = deck[(int)(Math.random()*52)-1];
+        d = new Dealer();
+        deal();
         p.print();
 
 
         System.out.println("dealers info");
-        d = new Dealer();
-        d.cards[0] = deck[(int)(Math.random()*52)-1];
-        d.cards[1] = deck[(int)(Math.random()*52)-1];
+
+
         d.print();
-
-
-
 
     }
     public void printDeck(){
@@ -49,5 +47,21 @@ public class BASICGAMEAPP {
             deck[x].print();
         }
 
+    }
+    public void deal(){
+        d.cards[0] = deck[2];
+        d.cards[1] = deck[3];
+
+        p.cards[0] = deck[0];
+        p.cards[1] = deck[1];
+    }
+
+    public void shuffle(){
+        System.out.println("shuffling");
+        for(int s = 0; s<deck.length; s++){
+            int random = (int)(Math.random()*52);
+
+            deck[s] = deck[random];
+        }
     }
 }
